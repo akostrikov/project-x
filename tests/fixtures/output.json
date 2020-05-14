@@ -1,0 +1,22 @@
+{
+    "vin": "WDD1671591Z000999",
+    "departure": "Stuttgart",
+    "destination": "München",
+    "refuelStops": [
+        {
+            "startTimestamp": 1559137020 ,
+            "endTimestamp": 1559137025,
+            "positionLat": 48.775,
+            "positionLong": 9.17279
+        }
+    ],
+    "consumption": 5.5,
+    "breaks": [
+        {
+            "startTimestamp":1559137020 ,
+            "endTimestamp": 1559137025,
+            "positionLat": 48.775,
+            "positionLong": 9.17279
+        }
+    ]
+}
