@@ -3,6 +3,14 @@ from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 from geopy.point import Point
 
+import ssl
+import geopy.geocoders
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+geopy.geocoders.options.default_ssl_context = ctx
+
+
 def parse_city(lat, lon):
     locator = Nominatim(user_agent="city_geocoder")
     coordinates = f"{lat}, {lon}"
