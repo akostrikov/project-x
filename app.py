@@ -2,7 +2,7 @@ from flask import Flask
 from flask import Flask, jsonify
 from flask import request
 
-from flask_swagger import swagger
+# from flask_swagger import swagger
 
 import json
 
@@ -56,6 +56,6 @@ def trip():
     
     return jsonify(analyzer.analyze.analyze(data))
 
-@app.route("/spec")
-def spec():
-    return jsonify(swagger(app))
+#@app.route("/spec")
+#def spec():
+#    return jsonify(swagger(app))
