@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-x-deployment
+  labels:
+    app: project-x
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project-x
+  template:
+    metadata:
+      labels:
+        app: project-x
+    spec:
+      containers:
+      - name: project-x
+        image: akostrikov/first:latest
+        ports:
+        - containerPort: 80
+
